@@ -1,120 +1,164 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+h1 {
+  font-family: 'Dancing Script', cursive;
+  color: white;
+  font-size: 70px;
+}
+.main-container {
+  background-image: url('../img/bcg-books.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 10px;
+  height: 100vh;
+}
+button {
+  display: flex;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+}
+button:hover {
+  background-color: white;
+  cursor: pointer;
 }
 
-body{
-    text-align: center;
-    background-color:rgb(160, 200, 206);
-    font-size: 30px;
-    height: 100vh;
-    font-family:'Montserrat', sans-serif;
-    margin:0;
+table {
+  background-color: rgba(255, 255, 255, 0.767);
+  height: 60vh;
+  width: 60vw;
+  border: 1px solid black;
+  margin-bottom: 20px;
 }
-h1{
-    font-family: 'Dancing Script', cursive;
-    color: white;
-    font-size: 70px;
+td:hover {
+  cursor: default;
 }
-.main-container{
-    background-color: rgb(33, 131, 173);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin:0px;
-    padding:10px;
-    height:100vh;
+.modal-read {
+  display: flex;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  height: auto;
+  width: 300px;
+  background-color: rgba(211, 211, 211, 0.795);
+  font-size: 20px;
+  flex-direction: column;
 }
-button{
-    display: flex;
-    margin:15px;
-    border-radius: 10px;
-    outline: none;
-    background-color:transparent;
-    border:none;
-    font-size: 30px;
+select {
+  font-size: 22px;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 36px;
 }
-button:hover{
-    background-color:white;
-    cursor: pointer;
+input {
+  font-size: 22px;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 36px;
 }
-
-table{
-    height: 60vh;
-    width: 60vw;
-    border:1px solid black; 
-    margin-bottom: 20px;
+.modal-image {
+  display: flex;
+  justify-content: space-around;
+  padding: 3px;
 }
-td:hover{
-    cursor:default;
+img {
+  width: 80px;
 }
-.modal{
-    display: flex;
-    position:fixed;
-    right: 10px;
-    top: 10px;
-    height: auto;
-    width: 300px;
-    background-color: rgba(211, 211, 211, 0.795);
-    font-size: 20px;
-    flex-direction: column;
+.rate {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.modal-image{
-    display: flex;
-    justify-content: space-around;
-    padding: 3px;
+.decrease {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: white;
+  margin: 2px;
+  transition: 0.3s;
 }
-img{
-    width: 80px;
+.modal-butt {
+  width: 30px;
 }
-.rate{
-    display: flex;   
-    justify-content: space-around;
-    align-items: center;
+.decrease:hover {
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
-.decrease{
-display:flex;
-justify-content:center;
-align-items: center;
-height: 20px;
-width: 20px;
-border: 1px solid white;
-border-radius: 50%;
-background-color: white;
-margin: 2px;
-transition: 0.3s;
+.butt:hover {
+  cursor: pointer;
 }
-.modal-btn{
-    width: 30px;
+th {
+  color: white;
+  padding: 5px;
+  text-decoration-line: underline;
 }
-.decrease:hover{
-    cursor: pointer;
-    background-color: rgb(0, 0, 0);
-    color: white;
+td:hover {
+  background-color: rgb(219, 208, 200);
+  box-shadow: 5px 5px 15px -1px #000000;
+  transition: 0.3s;
 }
-.btn:hover{
-cursor: pointer;
+.red:hover {
+  background-color: rgb(255, 0, 0);
 }
-th{
-    color:white;
-    padding: 5px;
-    text-decoration-line: underline;
+.orange:hover {
+  background-color: rgb(255, 166, 0);
 }
-td:hover{
-    background-color: rgb(219, 208, 200);
-    box-shadow: 5px 5px 15px -1px #000000;
-    transition: 0.3s;
-}
-.red:hover{
-    background-color:rgb(255, 0, 0);
-}
-.orange:hover{
-    background-color: rgb(255, 166, 0);
-}
-.green:hover{
-    background-color: rgb(0, 255, 0);
+.green:hover {
+  background-color: rgb(0, 255, 0);
 }
 
-.hide{
-    display: none;
+.hide {
+  display: none;
+}
+
+.modal-update {
+  transition: 0.4s;
+  background-color: #fcf064;
+  box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 100px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.black-screen {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.move-pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
